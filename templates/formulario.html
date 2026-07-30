@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Nuevo usuario</title>
+</head>
+<body>
+    <main>
+        <h1>Crear nuevo usuario</h1>
+        <section id="nuevo-usuario-sec">
+            <form action="/crear_usuario" method="POST">
+                <div class="">
+                    <label for="input_nombre">Nombre:</label><br>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div>
+                    <label for="input_apellido">Apellido:</label><br>
+                    <input type="text" id="apellido" name="apellido" required>
+                </div>
+                <div>
+                    <label for="input_email">Email:</label><br>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="input_password">Contraseña:</label><br>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" value="Crear">Crear</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
